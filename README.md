@@ -5,7 +5,7 @@ A skeleton-based real-time online action recognition project, classifying and re
 
 ------
 ## Introduction
-*The pipline of this work is:*   
+*The **pipline** of this work is:*   
  - Realtime pose estimation by [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose);   
  - Online human tracking for multi-people scenario by [DeepSort algorithm](https://github.com/nwojke/deep_sortv);   
  - Action recognition with DNN for each person based on single framewise joints detected from Openpose.
