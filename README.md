@@ -1,5 +1,5 @@
-# Online-Realtime-Action-Recognition-based-on-Openpose
-A skeleton-based real-time online action recognition project, classifying and recognizing base on framewise joints. Using openpose as the online pose estimator.   
+# Online-Realtime-Action-Recognition-based-on-OpenPose
+A skeleton-based real-time online action recognition project, classifying and recognizing base on framewise joints.
 (The code comments are partly descibed in chinese)
 
 
