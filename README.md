@@ -1,19 +1,50 @@
-# Face detection base on ResnetSSD
-Project of Face detection using Resnet and SSD, apply in image and webcam.   
-(The code comments are descibed in chinese)
+# Online-Action-Recognition-based-on-Openpose
+A skeleton-based real-time online action recognition project, classifying and recognizing base on framewise joints. Using openpose as the online pose estimator.   
+(The code comments are partly descibed in chinese)
+
 
 ------
-## ***Folder Intro***
-### —test_out
-The result of my test in webcam.
+## Introduction
+*The pipline of this work is:*   
+ - Realtime pose estimation by [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose);   
+ - Online human tracking for multi-people scenario by [DeepSort algorithm](https://github.com/nwojke/deep_sortv);   
+ - Action recognition with DNN for each person based on single framewise joints detected from Openpose.
 
-### —Resnet_SSD_deploy/Res10_300x300_SSD_iter_140000.caffemodel
-Files save the pre-trained SSD-Resnet caffe model.    
-   - .prototxt file specifies the architecture of the neural network – how the different layers are arranged etc.
-   - .caffemodel file stores the weights of the trained model.    
-   
-OpenCV’s deep learning face detector is based on the Single Shot Detector (SSD) framework with a ResNet base network (*unlike other OpenCV SSDs that you may have seen which typically use MobileNet as the base network).*
 
 ------
-## Result
-![my test](https://github.com/LZQthePlane/Face-detection-base-on-ResnetSSD/blob/master/test_out/example.gif) 
+## Dependencies
+ - Opencv > 3.4.1   
+ - sklearn
+ - tensorflow & keras
+ - numpy & scipy 
+ - pathlib
+ 
+ 
+------
+## Usage
+ - Download the openpose pretrained tf-model with command line `./download.sh` or fork [here](https://pan.baidu.com/s/1XT8pHtNP1FQs3BPHgD5f-A#list/path=%2Fsharelink1864347102-902260820936546%2Fopenpose%2Fopenpose%20graph%20model%20coco&parentPath=%2Fsharelink1864347102-902260820936546), and place it under the corresponding folder;  
+ - `python main.py`, it will **start the webcam**. 
+ (you can choose to test video with command `python main.py --video=test.mp4`, however I just tested the webcam mode)   
+ - By the way, you can choose different openpose pretrained model in script.    
+ **graph_opt.pb**: training with the VGG net, as same as the CMU providing caffemodel, ***more accurate but slower***, **graph_opt_mobile.pb**:  training with the Mobilenet, much smaller than the origin VGG, ***faster but less accurate***.   
+ Action Dataset in this repo is collected with the VGG model.
+
+
+------
+## Test result
+![my test](https://github.com/LZQthePlane/Online-Action-Recognition-based-on-Openpose/blob/master/test_out/webcam_test_out.gif) 
+
+
+-------
+## Note
+ - Action recognition in this work is framewise based, so it's technically "**Pose recognition**" to be exactly;   
+ - Action is actually a dynamic motion which consists of sequential static poses, therefore classifying framewisely is not a good solution.
+ - Considering of using ***RNN(LSTM) model*** to classify actions with dynamic sequential joints data is the next step to improve this project.
+
+
+------
+## Reference
+Thanks for the following awesome works:    
+[tf-pose-estimation](https://github.com/ildoonet/tf-pose-estimation),   
+[deep_sort_yolov3](https://github.com/Qidian213/deep_sort_yolov3),    
+[Real-Time-Action-Recognition](https://github.com/TianzhongSong/Real-Time-Action-Recognition)
