@@ -32,8 +32,9 @@ A skeleton-based real-time online action recognition project, classifying and re
 
 ------
 ## Test result
-![my test](https://github.com/LZQthePlane/Online-Action-Recognition-based-on-Openpose/blob/master/test_out/webcam_test_out.gif) 
-
+<p align="center">
+    <img src="https://github.com/LZQthePlane/Online-Action-Recognition-based-on-Openpose/blob/master/test_out/webcam_test_out.gif", width="840">
+ 
 
 -------
 ## Note
