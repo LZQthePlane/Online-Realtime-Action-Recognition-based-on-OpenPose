@@ -46,6 +46,6 @@ A skeleton-based real-time online action recognition project, classifying and re
 ------
 ## Reference
 Thanks for the following awesome works:    
-[tf-pose-estimation](https://github.com/ildoonet/tf-pose-estimation),   
-[deep_sort_yolov3](https://github.com/Qidian213/deep_sort_yolov3),    
-[Real-Time-Action-Recognition](https://github.com/TianzhongSong/Real-Time-Action-Recognition)
+ - [tf-pose-estimation](https://github.com/ildoonet/tf-pose-estimation),   
+ - [deep_sort_yolov3](https://github.com/Qidian213/deep_sort_yolov3),    
+ - [Real-Time-Action-Recognition](https://github.com/TianzhongSong/Real-Time-Action-Recognition)
