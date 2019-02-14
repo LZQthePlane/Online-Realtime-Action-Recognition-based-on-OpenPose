@@ -1,4 +1,4 @@
-# Online-Action-Recognition-based-on-Openpose
+# Online-Realtime-Action-Recognition-based-on-Openpose
 A skeleton-based real-time online action recognition project, classifying and recognizing base on framewise joints. Using openpose as the online pose estimator.   
 (The code comments are partly descibed in chinese)
 
@@ -44,7 +44,7 @@ A skeleton-based real-time online action recognition project, classifying and re
 
 
 ------
-## Reference
+## Ackonwledge
 Thanks to the following awesome works:    
  - [tf-pose-estimation](https://github.com/ildoonet/tf-pose-estimation),   
  - [deep_sort_yolov3](https://github.com/Qidian213/deep_sort_yolov3),    
