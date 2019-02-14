@@ -22,12 +22,12 @@ A skeleton-based real-time online action recognition project, classifying and re
  
 ------
 ## Usage
- - Download the openpose pretrained tf-model with command line `./download.sh` or fork [here](https://pan.baidu.com/s/1XT8pHtNP1FQs3BPHgD5f-A#list/path=%2Fsharelink1864347102-902260820936546%2Fopenpose%2Fopenpose%20graph%20model%20coco&parentPath=%2Fsharelink1864347102-902260820936546), and place it under the corresponding folder;  
+ - Download the openpose VGG tf-model with command line `./download.sh`(/Pose/graph_models/VGG_origin) or fork [here](https://pan.baidu.com/s/1XT8pHtNP1FQs3BPHgD5f-A#list/path=%2Fsharelink1864347102-902260820936546%2Fopenpose%2Fopenpose%20graph%20model%20coco&parentPath=%2Fsharelink1864347102-902260820936546), and place it under the corresponding folder; 
  - `python main.py`, it will **start the webcam**. 
  (you can choose to test video with command `python main.py --video=test.mp4`, however I just tested the webcam mode)   
  - By the way, you can choose different openpose pretrained model in script.    
- **graph_opt.pb**: training with the VGG net, as same as the CMU providing caffemodel, ***more accurate but slower***, **graph_opt_mobile.pb**:  training with the Mobilenet, much smaller than the origin VGG, ***faster but less accurate***.   
- Action Dataset in this repo is collected with the VGG model.
+ **graph_opt.pb**: training with the VGG net, as same as the CMU providing caffemodel, more accurate but slower, **graph_opt_mobile.pb**:  training with the Mobilenet, much smaller than the origin VGG, faster but less accurate.   
+ **However, Please attention that the Action Dataset in this repo is collected with the** ***VGG model.***
 
 
 ------
