@@ -27,7 +27,7 @@ A skeleton-based real-time online action recognition project, classifying and re
  (you can choose to test video with command `python main.py --video=test.mp4`, however I just tested the webcam mode)   
  - By the way, you can choose different openpose pretrained model in script.    
  **VGG_origin**: training with the VGG net, as same as the CMU providing caffemodel, more accurate but slower, **mobilenet_thin**:  training with the Mobilenet, much smaller than the origin VGG, faster but less accurate.   
- **However, Please attention that the Action Dataset in this repo is collected with the** ***VGG model.***
+ **However, Please attention that the Action Dataset in this repo is collected along with the** ***VGG model*** **running**.
 
 
 ------
