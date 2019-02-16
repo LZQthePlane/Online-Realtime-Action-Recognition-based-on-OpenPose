@@ -1,6 +1,5 @@
 import numpy as np
 import cv2 as cv
-from enum import Enum
 from pathlib import Path
 from Tracking.deep_sort import preprocessing
 from Tracking.deep_sort import nn_matching
@@ -8,6 +7,7 @@ from Tracking.deep_sort.detection import Detection
 from Tracking import generate_dets as gdet
 from Tracking.deep_sort.tracker import Tracker
 from keras.models import load_model
+from .action_enum import Actions
 
 # Use Deep-sort(Simple Online and Realtime Tracking)
 # To track multi-person for multi-person actions recognition
@@ -27,16 +27,6 @@ tracker = Tracker(metric)
 
 # track_box颜色
 trk_clr = (0, 255, 0)
-
-
-class Actions(Enum):
-    """
-    Actions enum
-    """
-    squat = 0
-    stand = 1
-    walk = 2
-    wave = 3
 
 
 class ActionRecognizer(object):

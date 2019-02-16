@@ -9,6 +9,7 @@ from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.models import load_model
 
+
 # load data
 raw_data = pd.read_csv('data.csv', header=0)
 dataset = raw_data.values
@@ -41,7 +42,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, dummy_Y, test_size=0.1, r
 # model.save('framewise_recognition.h5')
 
 # test
-model = load_model('framewise_recognition.h5')
+# model = load_model('framewise_recognition.h5')
 
 # test_input = [0.43, 0.46, 0.43, 0.52, 0.4, 0.52, 0.39, 0.61, 0.4,
 #               0.67, 0.46, 0.52, 0.46, 0.61, 0.46, 0.67, 0.42, 0.67,
@@ -50,8 +51,8 @@ model = load_model('framewise_recognition.h5')
 # test_np = np.array(test_input)
 # test_np = test_np.reshape(-1, 36)
 
-test_np = np.array(X[1033]).reshape(-1, 36)
-if test_np.size > 0:
-    pred = np.argmax(model.predict(test_np))
-    init_label = encoder.inverse_transform(pred)
-    print(init_label)
+# test_np = np.array(X[1033]).reshape(-1, 36)
+# if test_np.size > 0:
+#     pred = np.argmax(model.predict(test_np))
+#     init_label = encoder.inverse_transform(pred)
+#     print(init_label)
