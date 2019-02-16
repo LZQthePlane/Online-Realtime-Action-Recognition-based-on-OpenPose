@@ -3,7 +3,7 @@ import argparse
 import time
 from utils import choose_run_mode, load_pretrain_model, set_video_writer
 from Pose.pose_visualizer import TfPoseVisualizer
-from Action.actions_recognizing import ActionRecognizer
+from Action.recognizer import load_action_premodel, framewise_recognize
 
 parser = argparse.ArgumentParser(description='Action Recognition by OpenPose')
 parser.add_argument('--video', help='Path to video file.')
@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 # 导入相关模型
 estimator = load_pretrain_model('VGG_origin')
-action_classifier = ActionRecognizer.load_action_premodel('Action/framewise_recognition.h5')
+action_classifier = load_action_premodel('Action/framewise_recognition.h5')
 
 # 参数初始化
 realtime_fps = '0.0000'
@@ -36,7 +36,7 @@ while cv.waitKey(1) < 0:
         # get pose info
         pose = TfPoseVisualizer.draw_pose_rgb(show, humans)  # return frame, joints, bboxes, xcenter
         # recognize the action framewise
-        show = ActionRecognizer.framewise_recognize(pose, action_classifier)
+        show = framewise_recognize(pose, action_classifier)
 
         height, width = show.shape[:2]
         # 显示实时FPS值
