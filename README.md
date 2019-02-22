@@ -13,7 +13,8 @@ A skeleton-based real-time online action recognition project, classifying and re
 
 ------
 ## Dependencies
- - Opencv > 3.4.1   
+ - python >= 3.5
+ - Opencv >= 3.4.1   
  - sklearn
  - tensorflow & keras
  - numpy & scipy 
