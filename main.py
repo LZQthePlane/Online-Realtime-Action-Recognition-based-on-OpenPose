@@ -1,5 +1,6 @@
 import cv2 as cv
 import argparse
+import numpy as np
 import time
 from utils import choose_run_mode, load_pretrain_model, set_video_writer
 from Pose.pose_visualizer import TfPoseVisualizer
@@ -24,6 +25,10 @@ frame_count = 0
 # 读写视频文件（仅测试过webcam输入）
 cap = choose_run_mode(args)
 video_writer = set_video_writer(cap, write_fps=7)
+
+
+# # 保存关节数据的txt文件，用于训练过程(for training)
+# f = open('origin_data.txt', 'a+')
 
 while cv.waitKey(1) < 0:
     has_frame, show = cap.read()
@@ -56,11 +61,17 @@ while cv.waitKey(1) < 0:
         if frame_count == 1:
             run_timer = time.time()
         run_time = time.time() - run_timer
-        time_frame_label= '[Time:{0:.2f} | Frame:{1}]'.format(run_time, frame_count)
+        time_frame_label = '[Time:{0:.2f} | Frame:{1}]'.format(run_time, frame_count)
         cv.putText(show, time_frame_label, (5, height-15), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
 
         cv.imshow('Action Recognition based on OpenPose', show)
         video_writer.write(show)
 
+        # # 采集数据，用于训练过程(for training)
+        # joints_norm_per_frame = np.array(pose[-1]).astype(np.str)
+        # f.write(' '.join(joints_norm_per_frame))
+        # f.write('\n')
+
 video_writer.release()
 cap.release()
+# f.close()
