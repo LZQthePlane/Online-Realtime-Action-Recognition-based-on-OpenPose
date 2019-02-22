@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 class TrackState:
     """
     Enumeration type for the single target track state. Newly created tracks are
