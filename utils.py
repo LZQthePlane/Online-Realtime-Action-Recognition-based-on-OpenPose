@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import cv2 as cv
 import os
 import sys
@@ -51,4 +52,4 @@ def set_video_writer(cap, write_fps=15):
     return cv.VideoWriter(out_file_path,
                           cv.VideoWriter_fourcc(*'mp4v'),
                           write_fps,
-                          (round(cap.get(cv.CAP_PROP_FRAME_WIDTH)), round(cap.get(cv.CAP_PROP_FRAME_HEIGHT))))
+                          (int(round(cap.get(cv.CAP_PROP_FRAME_WIDTH))), int(round(cap.get(cv.CAP_PROP_FRAME_HEIGHT)))))

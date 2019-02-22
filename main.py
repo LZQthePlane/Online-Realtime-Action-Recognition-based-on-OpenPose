@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import cv2 as cv
 import argparse
 import time
@@ -23,7 +24,7 @@ frame_count = 0
 
 # 读写视频文件（仅测试过webcam输入）
 cap = choose_run_mode(args)
-video_writer = set_video_writer(cap, write_fps=7)
+video_writer = set_video_writer(cap, write_fps=int(7.0))
 
 while cv.waitKey(1) < 0:
     has_frame, show = cap.read()
