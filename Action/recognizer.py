@@ -1,9 +1,8 @@
-# -*- coding: UTF-8 -*-
 import numpy as np
 import cv2 as cv
 from pathlib import Path
 from Tracking.deep_sort import preprocessing
-from Tracking.deep_sort.nn_matching import NearestNeighborDistanceMetric
+from Tracking.deep_sort import nn_matching
 from Tracking.deep_sort.detection import Detection
 from Tracking import generate_dets as gdet
 from Tracking.deep_sort.tracker import Tracker
@@ -23,7 +22,7 @@ nms_max_overlap = 1.0
 # 初始化deep_sort
 model_filename = str(file_path/'Tracking/graph_model/mars-small128.pb')
 encoder = gdet.create_box_encoder(model_filename, batch_size=1)
-metric = NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)
+metric = nn_matching.NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)
 tracker = Tracker(metric)
 
 # track_box颜色
