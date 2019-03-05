@@ -40,12 +40,16 @@ A skeleton-based real-time online action recognition project, classifying and re
  
 ------
 ## Test result
-### *actions detection*
+ - ***actions detection***
 <p align="center">
-    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_test_out.gif", width="840">
+    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_test_out.gif", width="540">
  
-### *work monitoring*
-<div style="float:left;border:solid 5px 000;margin:2px;"><img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-1.gif" width="420"/><img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-2.gif"  width="420"/></div>   
+ - ***work monitoring***
+<p align="center">
+    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-1.gif", width="540">
+<p align="center">
+    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-2.gif", width="540">
+ 
 
 -------
 ## Note
