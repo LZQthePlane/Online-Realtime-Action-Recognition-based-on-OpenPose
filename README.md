@@ -50,6 +50,10 @@ A skeleton-based real-time online action recognition project, classifying and re
 <p align="center">
     <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-2.gif", width="540">
  
+  - ***multi people***
+ <p align="center">
+    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_multi-people.gif", width="540">
+ 
 
 -------
 ## Note
