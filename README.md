@@ -35,7 +35,7 @@ A skeleton-based real-time online action recognition project, classifying and re
 ## Training with own dataset
  - prepare data(actions) by running `main.py`, remember to ***uncomment the code of data collecting***, the origin data will be saved as a `.txt`.
  - transforming the `.txt` to `.csv`, you can use EXCEL to do this.
- - do the training with the `traing.py` in `Action/training/`, remember to ***change the action_enum***.
+ - do the training with the `traing.py` in `Action/training/`, remember to ***change the action_enum and output-layer of model***.
  
  
 ------
