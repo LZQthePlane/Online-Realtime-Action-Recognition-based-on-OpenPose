@@ -44,7 +44,7 @@ A skeleton-based real-time online action recognition project, classifying and re
 <p align="center">
     <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_test_out.gif", width="540">
  
- - ***work monitoring***
+ - ***work surveilence***
 <p align="center">
     <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-1.gif", width="540">
 <p align="center">
